@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NFT PLATFORM</title>
+
+    <!-- Bootstrap -->
+    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+      <div class="navbar" style='text-align:center; padding-top: 20px'>
+        <button class="btn btn-primary btn-mint-NFT" type="button">Mint</button>
+      </div>
+
+        <div class="panel panel-default" style='text-align:center; padding-bottom: 30px;'><br/><br/>
+          <input class="NFT-id" placeholder="NFT-ID"/> &nbsp;
+          <button class="btn btn-primary  btn-show-NFT" type="button">show NFT</button>
+          <div class="panel panel-default" id="panel-show-NFT" style="display:none">
+            <img id="show-NFT-image" class="img-rounded img-center" style="height:300px; width: 300px;" data-holder-rendered="true">
+            <br/><br/>
+            <span class="NFT-name"></span><br/>
+            <span class="NFT-power"></span>
+          </div>
+        </div>
+      <br/><br/>
+
+        <div class="panel panel-default" style="text-align:center; padding-bottom: 30px"><br/><br/>
+          <input class="NFT-id" placeholder="NFT-ID"/> &nbsp;
+          <input class="address" placeholder="Recipient-Address"/> &nbsp;
+          <button class="btn btn-primary btn-transfer-NFT" type="button">Transfer NFT</button>
+          </div>
+        </div>
+      <br/><br/>
+
+      <div class="panel panel-default" style="text-align:center; padding: 30px">
+
+        <p>Winner will receive 0.19 ETH and opponent's NFT.</p>
+        <input class="NFT-id" placeholder="NFT-ID"/> &nbsp;
+        <button class="btn btn-primary btn-fight-NFT" type="button">fight your NFT</button>
+        <div class="panel panel-default" id="panel-fight-NFT" style="display:none">
+          <h3 id="winnerH" style="display:none">Winner :</h3>
+          <img id="fight-NFT-image" class="img-rounded img-center" style="height:300px; width: 300px;" data-holder-rendered="true">
+          <br/><br/>
+          <span class="NFT-name"></span><br/>
+          <span class="NFT-power"></span>
+        </div>
+      </div>
+
+
+      <div class="row " style='text-align:center; margin:auto; ' >
+        <div class="panel panel-default" style='text-align:center; padding-bottom: 30px; margin-top:30px'><br/><br/>
+          <input class="NFT-id" placeholder="NFT-ID"/> &nbsp;
+          <input class="price" placeholder="Price"/> &nbsp;
+          <button class="btn btn-primary btn-sell-NFT" type="button">Sell NFT</button>
+        </div>
+      </div>
+      <br/><br/>
+
+      <div id="NFT-row" class="row" >
+      </div>
+    </div>
+
+      <div id="NFT-template" style="display: none;" >
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <div class="panel panel-default panel-item">
+            <div class="panel-heading">
+              <h3 class="panel-title"></h3>
+            </div>
+            <div class="panel-body">
+              <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="height:300px; width: 300px;" src="" data-holder-rendered="true">
+              <br/><br/>
+              <p style="display:none" class="item-hash"></p>
+              <div class="item-bash" style="display:none"></div>
+              <strong>ID </strong>: <span class="on-sale-NFT-id"></span><br/>
+              <strong>Power </strong>: <span class="NFT-power"></span><br/>
+              <strong>Price </strong>: <span class="NFT-price"></span><br/>
+              <button class="btn btn-default btn-buy-NFT" type="button" data-id="0">Buy</button>
+              <button class="btn btn-default btn-cancel-NFT-sale" type="button" data-id="0" style="float:right">cancel sale</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="src/js/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for axios http requests) -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="src/js/web3.min.js"></script>
+    <script src="src/js/truffle-contract.js"></script>
+
+    <script src="src/js/app.js"></script>
+  </body>
+</html>
